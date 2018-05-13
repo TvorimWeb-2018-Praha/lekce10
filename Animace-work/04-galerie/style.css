@@ -1,0 +1,65 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+*, :after, :before { box-sizing: border-box; }
+
+
+body {
+    font-family: sans-serif;
+}
+
+
+/* ---------------- */
+
+
+.foto {
+	position: relative;
+	width: 450px;
+	overflow: hidden;
+}
+
+.foto img {
+	width: 100%;
+	display: block;
+	transition: all 0.3s;
+}
+
+.popisek {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	text-align: center;
+	color: white;
+
+	transition: all 0.3s;
+	transform: translateY(100%);
+}
+
+.nazev {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.copyright {
+	font-size: 13px;
+}
+
+.copyright a {
+	color: white;
+}
+
+
+
+
+.foto:hover .popisek {
+	transform: translateY(0);
+}
+
+.foto:hover img {
+	transform: scale(1.15);
+}
+
+
+
+
+/**/
